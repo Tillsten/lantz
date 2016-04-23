@@ -430,7 +430,7 @@ We will define offset and frequency like we did with amplitude, and we will also
         def waveform(self):
             return int(self.query('?WVF'))
 
-        @waveform
+        @waveform.setter
         def waveform(self, value):
             self.query('!WVF {}'.format(value))
 
